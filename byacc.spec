@@ -2,16 +2,22 @@ Summary:	public domain yacc parser generator
 Summary(de):	Public Domain yacc-Parser-Generator
 Summary(fr):	Générateur d'analyseur lexical yacc du domaine public
 Summary(pl):	Generator analizatora sk³adni
+Summary(ru):	ó×ÏÂÏÄÎÏ ÒÁÓÐÒÏÓÔÒÁÎÑÅÍÙÊ ÇÅÎÅÒÁÔÏÒ ÐÁÒÓÅÒÏ× Yacc
 Summary(tr):	Ayrýþtýrýcý üreteci
+Summary(uk):	÷¦ÌØÎÏ ÒÏÚÐÏ×ÓÀÄÖÕ×ÁÎÉÊ ÇÅÎÅÒÁÔÏÒ ÐÁÒÓÅÒ¦× Yacc
 Name:		byacc
 Version:	1.9
-Release:	19
+Release:	21
 License:	public domain
 Group:		Development/Tools
 Source0:	ftp://ftp.cs.berkeley.edu/ucb/4bsd/%{name}.%{version}.tar.Z
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 Patch0:		%{name}-fixmanpage.patch
 Patch1:		%{name}-fix.patch
+Patch2:		%{name}-security.patch
+Patch3:		%{name}-automake.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
 Provides:	yacc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -37,27 +43,41 @@ publicznej, czêsto wykorzystywanym podczas budowania programów. Je¿eli
 zamierzasz zajmowaæ siê wytwarzaniem oprogramowania, warto
 zainstalowaæ ten pakiet.
 
+%description -l ru
+Byacc (Berkeley Yacc) - ÜÔÏ Ó×ÏÂÏÄÎÏ ÒÁÓÐÒÏÓÔÒÁÎÑÅÍÙÊ ÇÅÎÅÒÁÔÏÒ
+ÐÁÒÓÅÒÏ× LALR, ËÏÔÏÒÙÊ ÉÓÐÏÌØÚÕÅÔÓÑ ÍÎÏÇÉÍÉ ÐÒÏÇÒÁÍÍÁÍÉ × ÐÒÏÃÅÓÓÅ ÉÈ
+ÐÏÓÔÒÏÅÎÉÑ.
+
 %description -l tr
 byacc bir yacc ayrýþtýrýcýsýdýr. Pek çok program tarafýndan, kurulum
 süreci sýrasýnda kullanýlýr. Geliþtirme yapanlara gerekli olabilir.
+
+%description -l uk
+Byacc (Berkeley Yacc) - ÃÅ ×¦ÌØÎÏ ÒÏÚÐÏ×ÓÀÄÖÕ×ÁÎÉÊ ÇÅÎÅÒÁÔÏÒ ÐÁÒÓÅÒ¦×
+LALR, ÑËÉÊ ×ÉËÏÒÉÓÔÏ×Õ¤ÔØÓÑ ÂÁÇÁÔØÍÁ ÐÒÏÇÒÁÍÁÍÉ × ÐÒÏÃÅÓ¦ §È ÐÏÂÕÄÏ×É.
 
 %prep
 %setup -c -q
 %patch0 -p1
 %patch1 -p1
-chmod -R u+Xw .
+chmod -R u+Xrw .
+%patch2 -p1
+%patch3 -p1
 
 %build
-%{__make} \
-	CFLAGS="%{rpmcflags}" \
-	LDFLAGS="%{rpmldflags}"
+aclocal
+autoheader
+autoconf
+automake -a -c
+%configure
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
-install yacc $RPM_BUILD_ROOT%{_bindir}
-install yacc.1 $RPM_BUILD_ROOT%{_mandir}/man1
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 ln -sf yacc $RPM_BUILD_ROOT%{_bindir}/byacc
 echo ".so yacc.1" > $RPM_BUILD_ROOT%{_mandir}/man1/byacc.1
