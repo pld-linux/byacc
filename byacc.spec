@@ -1,41 +1,45 @@
-Summary:     	public domain yacc parser generator
-Summary(de): 	Public Domain yacc-Parser-Generator
-Summary(fr): 	Générateur d'analyseur lexical yacc du domaine public
-Summary(pl): 	Generator analizatora sk³adni 
-Summary(tr): 	Ayrýþtýrýcý üreteci
-Name:        	byacc
-Version:     	1.9
-Release:     	13
-Copyright:   	public domain
-Group:       	Development/Tools
-Group(pl):   	Programowanie/Narzêdzia
-Source:      	ftp://ftp.cs.berkeley.edu/ucb/4bsd/%{name}.%{version}.tar.Z
-Patch:		byacc-fixmanpage.patch
+Summary:	public domain yacc parser generator
+Summary(de):	Public Domain yacc-Parser-Generator
+Summary(fr):	Générateur d'analyseur lexical yacc du domaine public
+Summary(pl):	Generator analizatora sk³adni 
+Summary(tr):	Ayrýþtýrýcý üreteci
+Name:		byacc
+Version:	1.9
+Release:	13
+Copyright:	public domain
+Group:		Development/Tools
+Group(fr):	Development/Outils
+Group(pl):	Programowanie/Narzêdzia
+Source0:	ftp://ftp.cs.berkeley.edu/ucb/4bsd/%{name}.%{version}.tar.Z
+Patch0:		byacc-fixmanpage.patch
 Provides:	yacc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This is a public domain yacc parser. It is used by many programs during
-their build process. You probably want this package if you do development.
+This is a public domain yacc parser. It is used by many programs
+during their build process. You probably want this package if you do
+development.
 
 %description -l de
 Dies ist ein yacc-Parser aus dem Public Domain. Er wird von vielen
-Programmen zum Aufbau benutzt. Als Entwickler sind, werden Sie dieses Paket
-zu schätzen wissen.
+Programmen zum Aufbau benutzt. Als Entwickler sind, werden Sie dieses
+Paket zu schätzen wissen.
 
 %description -l fr
 C'est un analyseur de syntaxe du domain public. Il est utilisé par de
 nombreux programmes lors de leur processus de construction. Vous ne
-voudrez probablement pas ce package si vous ne faîtes pas de développement.
+voudrez probablement pas ce package si vous ne faîtes pas de
+développement.
 
 %description -l pl
-Yacc jest analizatorem sk³adni dostêpnym na zasadach w³asno¶ci publicznej,
-czêsto wykorzystywanym podczas budowania programów. Je¿eli zamierzasz
-zajmowaæ siê wytwarzaniem oprogramowania, warto zainstalowaæ ten pakiet.
+Yacc jest analizatorem sk³adni dostêpnym na zasadach w³asno¶ci
+publicznej, czêsto wykorzystywanym podczas budowania programów. Je¿eli
+zamierzasz zajmowaæ siê wytwarzaniem oprogramowania, warto
+zainstalowaæ ten pakiet.
 
 %description -l tr
-byacc bir yacc ayrýþtýrýcýsýdýr. Pek çok program tarafýndan, kurulum süreci
-sýrasýnda kullanýlýr. Geliþtirme yapanlara gerekli olabilir.
+byacc bir yacc ayrýþtýrýcýsýdýr. Pek çok program tarafýndan, kurulum
+süreci sýrasýnda kullanýlýr. Geliþtirme yapanlara gerekli olabilir.
 
 %prep
 %setup -c -q 
