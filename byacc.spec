@@ -63,10 +63,3 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-
-%changelog
-* Tue Jun 29 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [1.9-13]
-- based on RH spec,
-- spec rewrited by PLD team,
-- pl translation Marcin Korzonek <mkorz@shadow.eu.org>.
