@@ -38,29 +38,29 @@ sýrasýnda kullanýlýr. Geliþtirme yapanlara gerekli olabilir.
 %setup -c -q 
 
 %build
-make CFLAGS="$RPM_OPT_FLAGS"
+make CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/usr/{bin,man/man1}
 
-install -s yacc $RPM_BUILD_ROOT/usr/bin
+install yacc $RPM_BUILD_ROOT/usr/bin
 install yacc.1 $RPM_BUILD_ROOT/usr/man/man1
 
 ln -sf yacc $RPM_BUILD_ROOT/usr/bin/byacc
 echo ".so yacc.1" > $RPM_BUILD_ROOT/usr/man/man1/byacc.1
 
-%clean
-rm -rf $RPM_BUILD_ROOT
+gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/*
 
 %files
 %attr(755, root, root) /usr/bin/*
 %attr(644, root,  man) /usr/man/man1/*
 
 %changelog
-* Sun Nov  1 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
+* Wed Dec 23 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [1.9-10]
-- added %clean section.
+- added gzipping man pages.
+- added using LDFLAGS="-s" to ./configure enviroment.
 
 * Mon Oct 26 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [1.9-9]
