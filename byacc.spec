@@ -49,12 +49,12 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/usr/{bin,man/man1}
 
 install yacc $RPM_BUILD_ROOT/usr/bin
-install yacc.1 $RPM_BUILD_ROOT/usr/man/man1
+install yacc.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
 ln -sf yacc $RPM_BUILD_ROOT/usr/bin/byacc
-echo ".so yacc.1" > $RPM_BUILD_ROOT/usr/man/man1/byacc.1
+echo ".so yacc.1" > $RPM_BUILD_ROOT%{_mandir}/man1/byacc.1
 
-gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/*
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -62,7 +62,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) /usr/bin/*
-/usr/man/man1/*
+%{_mandir}/man1/*
 
 %changelog
 * Wed Dec 23 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
