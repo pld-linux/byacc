@@ -1,0 +1,69 @@
+diff -urN byacc-1.9/Makefile.am byacc-1.9.new/Makefile.am
+--- byacc-1.9/Makefile.am	Thu Jan  1 01:00:00 1970
++++ byacc-1.9.new/Makefile.am	Tue Feb 27 07:50:12 2001
+@@ -0,0 +1,24 @@
++EXTRA_DIST = \
++	ACKNOWLEDGEMENTS \
++	Makefile.old \
++	NEW_FEATURES \
++	NOTES \
++	NO_WARRANTY \
++	README yacc.1
++bin_PROGRAMS = yacc
++SUBDIRS = test
++yacc_SOURCES = \
++	defs.h	\
++	closure.c	\
++	error.c	\
++	lalr.c	\
++	lr0.c	\
++	main.c	\
++	mkpar.c	\
++	output.c	\
++	reader.c	\
++	skeleton.c	\
++	symtab.c	\
++	verbose.c	\
++	warshall.c
++man_MANS = yacc.1
+diff -urN byacc-1.9/configure.in byacc-1.9.new/configure.in
+--- byacc-1.9/configure.in	Thu Jan  1 01:00:00 1970
++++ byacc-1.9.new/configure.in	Tue Feb 27 07:50:34 2001
+@@ -0,0 +1,24 @@
++dnl Process this file with autoconf to produce a configure script.
++AC_INIT(main.c)
++AM_CONFIG_HEADER(config.h)
++AM_INIT_AUTOMAKE(byacc, 1.9)
++
++AC_ARG_ENABLE(final,[production build],CPPFLAGS="$CPPFLAGS -DNDEBUG")
++
++dnl Checks for programs.
++AC_PROG_CC
++AC_PROG_GCC_TRADITIONAL
++
++dnl Checks for libraries.
++
++dnl Checks for header files.
++AC_CHECK_HEADERS(syslog.h)
++
++dnl Checks for typedefs, structures, and compiler characteristics.
++AC_STRUCT_TM
++
++dnl Checks for library functions.
++AC_HEADER_STDC
++AC_TYPE_SIGNAL
++
++AC_OUTPUT(Makefile test/Makefile)
+diff -urN byacc-1.9/test/Makefile.am byacc-1.9.new/test/Makefile.am
+--- byacc-1.9/test/Makefile.am	Thu Jan  1 01:00:00 1970
++++ byacc-1.9.new/test/Makefile.am	Tue Feb 27 07:23:10 2001
+@@ -0,0 +1,9 @@
++EXTRA_DIST =	\
++	error.output	\
++	error.tab.c	\
++	error.tab.h	\
++	error.y	\
++	ftp.output	\
++	ftp.tab.c	\
++	ftp.tab.h	\
++	ftp.y
