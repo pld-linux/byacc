@@ -1,4 +1,4 @@
-Summary:	public domain yacc parser generator
+Summary:	Public domain yacc parser generator
 Summary(de):	Public Domain yacc-Parser-Generator
 Summary(es):	Yacc, generador de parser de dominio público
 Summary(fr):	Générateur d'analyseur lexical yacc du domaine public
