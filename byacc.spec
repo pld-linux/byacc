@@ -46,6 +46,7 @@ süreci sýrasýnda kullanýlýr. Geliþtirme yapanlara gerekli olabilir.
 %setup -c -q 
 %patch0 -p1
 %patch1 -p1
+chmod -R u+Xw .
 
 %build
 %{__make} CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s"
