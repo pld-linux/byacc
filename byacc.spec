@@ -65,8 +65,9 @@ chmod -R u+Xrw .
 %patch3 -p1
 
 %build
-aclocal
-autoheader
+rm -f missing
+%{__aclocal}
+%{__autoheader}
 %{__autoconf}
 %{__automake}
 %configure
