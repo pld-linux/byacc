@@ -8,6 +8,7 @@ Version:     1.9
 Release:     10
 Copyright:   public domain
 Group:       Development/Tools
+Group(pl):   Programowanie/Narzêdzia
 Source:      ftp://ftp.cs.berkeley.edu/ucb/4bsd/%{name}.%{version}.tar.Z
 Buildroot:   /tmp/%{name}-%{version}-root
 
