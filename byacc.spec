@@ -51,7 +51,7 @@ chmod -R u+Xw .
 
 %build
 %{__make} \
-	CFLAGS="%{?debug:-O0 -g}%{!?debug:$RPM_OPT_FLAGS}" \
+	CFLAGS="%{rpmcflags}" \
 	LDFLAGS="%{?debug:-s}"
 
 %install
