@@ -46,7 +46,7 @@ süreci sýrasýnda kullanýlýr. Geliþtirme yapanlara gerekli olabilir.
 %patch -p1
 
 %build
-make CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s"
+%{__make} CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s"
 
 %install
 rm -rf $RPM_BUILD_ROOT
