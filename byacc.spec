@@ -48,10 +48,10 @@ make CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s"
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/usr/{bin,man/man1}
 
-install yacc $RPM_BUILD_ROOT/usr/bin
+install yacc $RPM_BUILD_ROOT%{_bindir}
 install yacc.1 $RPM_BUILD_ROOT%{_mandir}/man1
 
-ln -sf yacc $RPM_BUILD_ROOT/usr/bin/byacc
+ln -sf yacc $RPM_BUILD_ROOT%{_bindir}/byacc
 echo ".so yacc.1" > $RPM_BUILD_ROOT%{_mandir}/man1/byacc.1
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/*
@@ -61,7 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) /usr/bin/*
+%attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 
 %changelog
