@@ -1,9 +1,9 @@
 Summary:	public domain yacc parser generator
 Summary(de):	Public Domain yacc-Parser-Generator
-Summary(es): Yacc, generador de parser de dominio pЗblico
+Summary(es):	Yacc, generador de parser de dominio pЗblico
 Summary(fr):	GИnИrateur d'analyseur lexical yacc du domaine public
 Summary(pl):	Generator analizatora skЁadni
-Summary(pt_BR): Yacc, gerador de parser de domМnio pЗblico
+Summary(pt_BR):	Yacc, gerador de parser de domМnio pЗblico
 Summary(ru):	Свободно распространяемый генератор парсеров Yacc
 Summary(tr):	AyrЩЧtЩrЩcЩ Эreteci
 Summary(uk):	В╕льно розповсюджуваний генератор парсер╕в Yacc
@@ -15,7 +15,7 @@ Group:		Development/Tools
 Source0:	ftp://ftp.cs.berkeley.edu/ucb/4bsd/%{name}.%{version}.tar.Z
 # Source0-md5:	646801f9c335dc8d35ad044b526b289e
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
-# Source1-md5: 2de3e6e1e7098a7c9e5492f5b3911d56
+# Source1-md5:	2de3e6e1e7098a7c9e5492f5b3911d56
 Patch0:		%{name}-fixmanpage.patch
 Patch1:		%{name}-fix.patch
 Patch2:		%{name}-security.patch
