@@ -1,13 +1,15 @@
 Summary:	public domain yacc parser generator
 Summary(de):	Public Domain yacc-Parser-Generator
+Summary(es): Yacc, generador de parser de dominio público
 Summary(fr):	Générateur d'analyseur lexical yacc du domaine public
 Summary(pl):	Generator analizatora sk³adni
+Summary(pt_BR): Yacc, gerador de parser de domínio público
 Summary(ru):	ó×ÏÂÏÄÎÏ ÒÁÓĞÒÏÓÔÒÁÎÑÅÍÙÊ ÇÅÎÅÒÁÔÏÒ ĞÁÒÓÅÒÏ× Yacc
 Summary(tr):	Ayrıştırıcı üreteci
 Summary(uk):	÷¦ÌØÎÏ ÒÏÚĞÏ×ÓÀÄÖÕ×ÁÎÉÊ ÇÅÎÅÒÁÔÏÒ ĞÁÒÓÅÒ¦× Yacc
 Name:		byacc
 Version:	1.9
-Release:	21
+Release:	23
 License:	Public Domain
 Group:		Development/Tools
 Source0:	ftp://ftp.cs.berkeley.edu/ucb/4bsd/%{name}.%{version}.tar.Z
@@ -31,6 +33,11 @@ Dies ist ein yacc-Parser aus dem Public Domain. Er wird von vielen
 Programmen zum Aufbau benutzt. Als Entwickler sind, werden Sie dieses
 Paket zu schätzen wissen.
 
+%description -l es
+Este es un analista gramatical yacc de dominio público. Se usa en
+varios programas durante su proceso de construcción. Probablemente
+querrás este paquete si te dedicas al desarrollo.
+
 %description -l fr
 C'est un analyseur de syntaxe du domain public. Il est utilisé par de
 nombreux programmes lors de leur processus de construction. Vous ne
@@ -42,6 +49,11 @@ Yacc jest analizatorem sk³adni dostêpnym na zasadach w³asno¶ci
 publicznej, czêsto wykorzystywanym podczas budowania programów. Je¿eli
 zamierzasz zajmowaæ siê wytwarzaniem oprogramowania, warto
 zainstalowaæ ten pakiet.
+
+%description -l pt_BR
+Este é um analisador gramatical yacc de domínio público. Ele é
+usado em vários programas durante seu processo de construção. Você
+provavelmente vai querer este pacote se você faz desenvolvimento.
 
 %description -l ru
 Byacc (Berkeley Yacc) - ÜÔÏ Ó×ÏÂÏÄÎÏ ÒÁÓĞÒÏÓÔÒÁÎÑÅÍÙÊ ÇÅÎÅÒÁÔÏÒ
