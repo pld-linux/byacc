@@ -1,7 +1,7 @@
 Summary:	public domain yacc parser generator
 Summary(de):	Public Domain yacc-Parser-Generator
 Summary(fr):	Générateur d'analyseur lexical yacc du domaine public
-Summary(pl):	Generator analizatora sk³adni 
+Summary(pl):	Generator analizatora sk³adni
 Summary(tr):	Ayrýþtýrýcý üreteci
 Name:		byacc
 Version:	1.9
@@ -42,7 +42,7 @@ byacc bir yacc ayrýþtýrýcýsýdýr. Pek çok program tarafýndan, kurulum
 süreci sýrasýnda kullanýlýr. Geliþtirme yapanlara gerekli olabilir.
 
 %prep
-%setup -c -q 
+%setup -c -q
 %patch0 -p1
 %patch1 -p1
 chmod -R u+Xw .
