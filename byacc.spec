@@ -1,16 +1,18 @@
-Summary:     public domain yacc parser generator
-Summary(de): Public Domain yacc-Parser-Generator
-Summary(fr): Générateur d'analyseur lexical yacc du domaine public
-Summary(pl): Generator analizatora sk³adni 
-Summary(tr): Ayrýþtýrýcý üreteci
-Name:        byacc
-Version:     1.9
-Release:     10
-Copyright:   public domain
-Group:       Development/Tools
-Group(pl):   Programowanie/Narzêdzia
-Source:      ftp://ftp.cs.berkeley.edu/ucb/4bsd/%{name}.%{version}.tar.Z
-Buildroot:   /tmp/%{name}-%{version}-root
+Summary:     	public domain yacc parser generator
+Summary(de): 	Public Domain yacc-Parser-Generator
+Summary(fr): 	Générateur d'analyseur lexical yacc du domaine public
+Summary(pl): 	Generator analizatora sk³adni 
+Summary(tr): 	Ayrýþtýrýcý üreteci
+Name:        	byacc
+Version:     	1.9
+Release:     	12
+Copyright:   	public domain
+Group:       	Development/Tools
+Group(pl):   	Programowanie/Narzêdzia
+Source:      	ftp://ftp.cs.berkeley.edu/ucb/4bsd/%{name}.%{version}.tar.Z
+Patch:		byacc-fixmanpage.patch
+Provides:	yacc
+Buildroot:   	/tmp/%{name}-%{version}-root
 
 %description
 This is a public domain yacc parser. It is used by many programs during
@@ -37,6 +39,7 @@ sýrasýnda kullanýlýr. Geliþtirme yapanlara gerekli olabilir.
 
 %prep
 %setup -c -q 
+%patch -p1
 
 %build
 make CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s"
