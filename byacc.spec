@@ -5,13 +5,14 @@ Summary(pl):	Generator analizatora sk³adni
 Summary(tr):	Ayrýþtýrýcý üreteci
 Name:		byacc
 Version:	1.9
-Release:	13
-Copyright:	public domain
+Release:	17
+License:	public domain
 Group:		Development/Tools
 Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
 Source0:	ftp://ftp.cs.berkeley.edu/ucb/4bsd/%{name}.%{version}.tar.Z
-Patch0:		byacc-fixmanpage.patch
+Patch0:		%{name}-fixmanpage.patch
+Patch1:		%{name}-fix.patch
 Provides:	yacc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -43,7 +44,8 @@ süreci sýrasýnda kullanýlýr. Geliþtirme yapanlara gerekli olabilir.
 
 %prep
 %setup -c -q 
-%patch -p1
+%patch0 -p1
+%patch1 -p1
 
 %build
 %{__make} CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s"
