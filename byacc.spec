@@ -5,7 +5,7 @@ Summary(pl): 	Generator analizatora sk³adni
 Summary(tr): 	Ayrýþtýrýcý üreteci
 Name:        	byacc
 Version:     	1.9
-Release:     	12
+Release:     	13
 Copyright:   	public domain
 Group:       	Development/Tools
 Group(pl):   	Programowanie/Narzêdzia
@@ -46,7 +46,7 @@ make CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/{bin,man/man1}
+install -d $RPM_BUILD_ROOT/usr/{bin,share/man/man1}
 
 install yacc $RPM_BUILD_ROOT%{_bindir}
 install yacc.1 $RPM_BUILD_ROOT%{_mandir}/man1
@@ -65,6 +65,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/*
 
 %changelog
+* Mon Jun 07 1999 Jan Rêkorajski <baggins@pld.org.pl>
+  [1.9-13]
+- spec cleanup
+
 * Wed Dec 23 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [1.9-10]
 - added gzipping man pages.
