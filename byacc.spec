@@ -68,7 +68,7 @@ chmod -R u+Xrw .
 aclocal
 autoheader
 autoconf
-automake -a -c
+automake -a -c -f
 %configure
 %{__make}
 
