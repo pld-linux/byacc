@@ -14,6 +14,7 @@ License:	Public Domain
 Group:		Development/Tools
 Source0:	ftp://ftp.cs.berkeley.edu/ucb/4bsd/%{name}.%{version}.tar.Z
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
+# Source1-md5: 2de3e6e1e7098a7c9e5492f5b3911d56
 Patch0:		%{name}-fixmanpage.patch
 Patch1:		%{name}-fix.patch
 Patch2:		%{name}-security.patch
