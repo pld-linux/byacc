@@ -12,7 +12,7 @@ Group(de):	Entwicklung/Werkzeuge
 Group(fr):	Development/Outils
 Group(pl):	Programowanie/Narzêdzia
 Source0:	ftp://ftp.cs.berkeley.edu/ucb/4bsd/%{name}.%{version}.tar.Z
-Source1:	%{name}-non-english-man-pages.tar.bz2
+Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 Patch0:		%{name}-fixmanpage.patch
 Patch1:		%{name}-fix.patch
 Provides:	yacc
