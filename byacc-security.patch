@@ -1,0 +1,56 @@
+--- byacc-1.9/main.c.orig	Mon Feb 22 07:32:46 1993
++++ byacc-1.9/main.c	Sun Mar 10 10:52:31 2002
+@@ -57,16 +57,29 @@
+ short **derives;
+ char *nullable;
+ 
+-extern char *mktemp();
++#ifdef linux
++# define mktemp		safe_mktemp
++extern void		safe_mktemp(char *tmpl);
++#endif
++
+ extern char *getenv();
+ 
+ 
+ done(k)
+ int k;
+ {
+-    if (action_file) { fclose(action_file); unlink(action_file_name); }
+-    if (text_file) { fclose(text_file); unlink(text_file_name); }
+-    if (union_file) { fclose(union_file); unlink(union_file_name); }
++    if (action_file)
++	fclose(action_file);
++    if (action_file_name[0])
++     	unlink(action_file_name);
++    if (text_file)
++	fclose(text_file);
++    if (text_file_name[0])
++     	unlink(text_file_name);
++    if (union_file)
++	fclose(union_file);
++    if (union_file_name[0])
++     	unlink(union_file_name);
+     exit(k);
+ }
+ 
+@@ -355,6 +368,19 @@
+ 	code_file = output_file;
+ }
+ 
++#ifdef linux
++void
++safe_mktemp(char *fname)
++{
++    int	fd;
++
++    if ((fd = mkstemp(fname)) < 0) {
++        perror("unable to create temp file");
++	exit(1);
++    }
++    close(fd);
++}
++#endif
+ 
+ int
+ main(argc, argv)
