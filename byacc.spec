@@ -53,9 +53,13 @@ echo ".so yacc.1" > $RPM_BUILD_ROOT/usr/man/man1/byacc.1
 
 gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/*
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %files
-%attr(755, root, root) /usr/bin/*
-%attr(644, root,  man) /usr/man/man1/*
+%defattr(644,root,root,755)
+%attr(755,root,root) /usr/bin/*
+/usr/man/man1/*
 
 %changelog
 * Wed Dec 23 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
