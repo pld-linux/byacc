@@ -12,7 +12,7 @@ Group(pl):   	Programowanie/Narzêdzia
 Source:      	ftp://ftp.cs.berkeley.edu/ucb/4bsd/%{name}.%{version}.tar.Z
 Patch:		byacc-fixmanpage.patch
 Provides:	yacc
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This is a public domain yacc parser. It is used by many programs during
