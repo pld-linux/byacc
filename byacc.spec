@@ -5,7 +5,7 @@ Summary(pl): Generator analizatora sk³adni
 Summary(tr): Ayrýþtýrýcý üreteci
 Name:        byacc
 Version:     1.9
-Release:     9
+Release:     10
 Copyright:   public domain
 Group:       Development/Tools
 Source:      ftp://ftp.cs.berkeley.edu/ucb/4bsd/%{name}.%{version}.tar.Z
@@ -50,11 +50,18 @@ install yacc.1 $RPM_BUILD_ROOT/usr/man/man1
 ln -sf yacc $RPM_BUILD_ROOT/usr/bin/byacc
 echo ".so yacc.1" > $RPM_BUILD_ROOT/usr/man/man1/byacc.1
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %files
 %attr(755, root, root) /usr/bin/*
 %attr(644, root,  man) /usr/man/man1/*
 
 %changelog
+* Sun Nov  1 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
+  [1.9-10]
+- added %clean section.
+
 * Mon Oct 26 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [1.9-9]
 - byacc(1) man page is now maked as nroff include to yacc(1) instead
