@@ -8,7 +8,7 @@ Summary(uk):	В╕льно розповсюджуваний генератор парсер╕в Yacc
 Name:		byacc
 Version:	1.9
 Release:	21
-License:	public domain
+License:	Public Domain
 Group:		Development/Tools
 Source0:	ftp://ftp.cs.berkeley.edu/ucb/4bsd/%{name}.%{version}.tar.Z
 Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
