@@ -20,7 +20,7 @@ Patch2:		%{name}-security.patch
 Patch3:		%{name}-automake.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
-Obsoltes:	bison
+Obsoletes:	bison
 Provides:	yacc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
