@@ -46,7 +46,7 @@ make CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/{bin,share/man/man1}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 
 install yacc $RPM_BUILD_ROOT%{_bindir}
 install yacc.1 $RPM_BUILD_ROOT%{_mandir}/man1
@@ -65,30 +65,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/*
 
 %changelog
-* Mon Jun 07 1999 Jan Rêkorajski <baggins@pld.org.pl>
+* Tue Jun 29 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [1.9-13]
-- spec cleanup
-
-* Wed Dec 23 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [1.9-10]
-- added gzipping man pages.
-- added using LDFLAGS="-s" to ./configure enviroment.
-
-* Mon Oct 26 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [1.9-9]
-- byacc(1) man page is now maked as nroff include to yacc(1) instead
-  making sym link to yacc.1 (this allow compress man pages in future).
-
-* Wed Sep 23 1998 Marcin Korzonek <mkorz@shadow.eu.org>
-- allow building from non root account,
-- added using $RPM_OPT_FLAGS during compile,
-- added pl translation.
-
-* Tue May 05 1998 Prospector System <bugs@redhat.com>
-- translations modified for de, fr, tr
-
-* Thu Oct 23 1997 Donnie Barnes <djb@redhat.com>
-- various spec file cleanups
-
-* Mon Jun 02 1997 Erik Troan <ewt@redhat.com>
-- built against glibc
+- based on RH spec,
+- spec rewrited by PLD team,
+- pl translation Marcin Korzonek <mkorz@shadow.eu.org>.
