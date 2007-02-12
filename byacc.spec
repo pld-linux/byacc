@@ -1,12 +1,12 @@
 Summary:	Public domain yacc parser generator
-Summary(de):	Public Domain yacc-Parser-Generator
-Summary(es):	Yacc, generador de parser de dominio pЗblico
-Summary(fr):	GИnИrateur d'analyseur lexical yacc du domaine public
-Summary(pl):	Generator analizatora skЁadni
-Summary(pt_BR):	Yacc, gerador de parser de domМnio pЗblico
-Summary(ru):	Свободно распространяемый генератор парсеров Yacc
-Summary(tr):	AyrЩЧtЩrЩcЩ Эreteci
-Summary(uk):	В╕льно розповсюджуваний генератор парсер╕в Yacc
+Summary(de.UTF-8):   Public Domain yacc-Parser-Generator
+Summary(es.UTF-8):   Yacc, generador de parser de dominio pц╨blico
+Summary(fr.UTF-8):   Gц╘nц╘rateur d'analyseur lexical yacc du domaine public
+Summary(pl.UTF-8):   Generator analizatora skе┌adni
+Summary(pt_BR.UTF-8):   Yacc, gerador de parser de domц╜nio pц╨blico
+Summary(ru.UTF-8):   п║п╡п╬п╠п╬п╢п╫п╬ я─п╟я│п©я─п╬я│я┌я─п╟п╫я▐п╣п╪я▀п╧ пЁп╣п╫п╣я─п╟я┌п╬я─ п©п╟я─я│п╣я─п╬п╡ Yacc
+Summary(tr.UTF-8):   Ayrд╠е÷tд╠rд╠cд╠ ц╪reteci
+Summary(uk.UTF-8):   п▓я√п╩я▄п╫п╬ я─п╬п╥п©п╬п╡я│я▌п╢п╤я┐п╡п╟п╫п╦п╧ пЁп╣п╫п╣я─п╟я┌п╬я─ п©п╟я─я│п╣я─я√п╡ Yacc
 Name:		byacc
 Version:	1.9
 Release:	25
@@ -30,45 +30,45 @@ This is a public domain yacc parser. It is used by many programs
 during their build process. You probably want this package if you do
 development.
 
-%description -l de
+%description -l de.UTF-8
 Dies ist ein yacc-Parser aus dem Public Domain. Er wird von vielen
 Programmen zum Aufbau benutzt. Als Entwickler sind, werden Sie dieses
-Paket zu schДtzen wissen.
+Paket zu schц╓tzen wissen.
 
-%description -l es
-Este es un analista gramatical yacc de dominio pЗblico. Se usa en
-varios programas durante su proceso de construcciСn. Probablemente
-querrАs este paquete si te dedicas al desarrollo.
+%description -l es.UTF-8
+Este es un analista gramatical yacc de dominio pц╨blico. Se usa en
+varios programas durante su proceso de construcciцЁn. Probablemente
+querrц║s este paquete si te dedicas al desarrollo.
 
-%description -l fr
-C'est un analyseur de syntaxe du domain public. Il est utilisИ par de
+%description -l fr.UTF-8
+C'est un analyseur de syntaxe du domain public. Il est utilisц╘ par de
 nombreux programmes lors de leur processus de construction. Vous ne
-voudrez probablement pas ce package si vous ne faНtes pas de
-dИveloppement.
+voudrez probablement pas ce package si vous ne faц╝tes pas de
+dц╘veloppement.
 
-%description -l pl
-Yacc jest analizatorem skЁadni dostЙpnym na zasadach wЁasno╤ci
-publicznej, czЙsto wykorzystywanym podczas budowania programСw. Je©eli
-zamierzasz zajmowaФ siЙ wytwarzaniem oprogramowania, warto
-zainstalowaФ ten pakiet.
+%description -l pl.UTF-8
+Yacc jest analizatorem skе┌adni dostд≥pnym na zasadach wе┌asnoе⌡ci
+publicznej, czд≥sto wykorzystywanym podczas budowania programцЁw. Jeе╪eli
+zamierzasz zajmowaд┤ siд≥ wytwarzaniem oprogramowania, warto
+zainstalowaд┤ ten pakiet.
 
-%description -l pt_BR
-Este И um analisador gramatical yacc de domМnio pЗblico. Ele И
-usado em vАrios programas durante seu processo de construГЦo. VocЙ
-provavelmente vai querer este pacote se vocЙ faz desenvolvimento.
+%description -l pt_BR.UTF-8
+Este ц╘ um analisador gramatical yacc de domц╜nio pц╨blico. Ele ц╘
+usado em vц║rios programas durante seu processo de construц╖цёo. Vocц╙
+provavelmente vai querer este pacote se vocц╙ faz desenvolvimento.
 
-%description -l ru
-Byacc (Berkeley Yacc) - это свободно распространяемый генератор
-парсеров LALR, который используется многими программами в процессе их
-построения.
+%description -l ru.UTF-8
+Byacc (Berkeley Yacc) - я█я┌п╬ я│п╡п╬п╠п╬п╢п╫п╬ я─п╟я│п©я─п╬я│я┌я─п╟п╫я▐п╣п╪я▀п╧ пЁп╣п╫п╣я─п╟я┌п╬я─
+п©п╟я─я│п╣я─п╬п╡ LALR, п╨п╬я┌п╬я─я▀п╧ п╦я│п©п╬п╩я▄п╥я┐п╣я┌я│я▐ п╪п╫п╬пЁп╦п╪п╦ п©я─п╬пЁя─п╟п╪п╪п╟п╪п╦ п╡ п©я─п╬я├п╣я│я│п╣ п╦я┘
+п©п╬я│я┌я─п╬п╣п╫п╦я▐.
 
-%description -l tr
-byacc bir yacc ayrЩЧtЩrЩcЩsЩdЩr. Pek Гok program tarafЩndan, kurulum
-sЭreci sЩrasЩnda kullanЩlЩr. GeliЧtirme yapanlara gerekli olabilir.
+%description -l tr.UTF-8
+byacc bir yacc ayrд╠е÷tд╠rд╠cд╠sд╠dд╠r. Pek ц╖ok program tarafд╠ndan, kurulum
+sц╪reci sд╠rasд╠nda kullanд╠lд╠r. Geliе÷tirme yapanlara gerekli olabilir.
 
-%description -l uk
-Byacc (Berkeley Yacc) - це в╕льно розповсюджуваний генератор парсер╕в
-LALR, який використову╓ться багатьма програмами в процес╕ ╖х побудови.
+%description -l uk.UTF-8
+Byacc (Berkeley Yacc) - я├п╣ п╡я√п╩я▄п╫п╬ я─п╬п╥п©п╬п╡я│я▌п╢п╤я┐п╡п╟п╫п╦п╧ пЁп╣п╫п╣я─п╟я┌п╬я─ п©п╟я─я│п╣я─я√п╡
+LALR, я▐п╨п╦п╧ п╡п╦п╨п╬я─п╦я│я┌п╬п╡я┐я■я┌я▄я│я▐ п╠п╟пЁп╟я┌я▄п╪п╟ п©я─п╬пЁя─п╟п╪п╟п╪п╦ п╡ п©я─п╬я├п╣я│я√ я≈я┘ п©п╬п╠я┐п╢п╬п╡п╦.
 
 %prep
 %setup -c -q
