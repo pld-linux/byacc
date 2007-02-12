@@ -1,12 +1,12 @@
 Summary:	Public domain yacc parser generator
-Summary(de.UTF-8):   Public Domain yacc-Parser-Generator
-Summary(es.UTF-8):   Yacc, generador de parser de dominio público
-Summary(fr.UTF-8):   Générateur d'analyseur lexical yacc du domaine public
-Summary(pl.UTF-8):   Generator analizatora składni
-Summary(pt_BR.UTF-8):   Yacc, gerador de parser de domínio público
-Summary(ru.UTF-8):   Свободно распространяемый генератор парсеров Yacc
-Summary(tr.UTF-8):   Ayrıştırıcı üreteci
-Summary(uk.UTF-8):   Вільно розповсюджуваний генератор парсерів Yacc
+Summary(de.UTF-8):	Public Domain yacc-Parser-Generator
+Summary(es.UTF-8):	Yacc, generador de parser de dominio público
+Summary(fr.UTF-8):	Générateur d'analyseur lexical yacc du domaine public
+Summary(pl.UTF-8):	Generator analizatora składni
+Summary(pt_BR.UTF-8):	Yacc, gerador de parser de domínio público
+Summary(ru.UTF-8):	Свободно распространяемый генератор парсеров Yacc
+Summary(tr.UTF-8):	Ayrıştırıcı üreteci
+Summary(uk.UTF-8):	Вільно розповсюджуваний генератор парсерів Yacc
 Name:		byacc
 Version:	1.9
 Release:	25
