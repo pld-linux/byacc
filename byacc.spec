@@ -9,7 +9,7 @@ Summary(tr.UTF-8):	Ayrıştırıcı üreteci
 Summary(uk.UTF-8):	Вільно розповсюджуваний генератор парсерів Yacc
 Name:		byacc
 Version:	1.9
-Release:	25
+Release:	26
 License:	Public Domain
 Group:		Development/Tools
 Source0:	ftp://ftp.cs.berkeley.edu/ucb/4bsd/%{name}.%{version}.tar.Z
