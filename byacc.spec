@@ -72,11 +72,11 @@ LALR, який використовується багатьма програм�
 
 %prep
 %setup -c -q
-%patch0 -p1
-%patch1 -p1
+%patch -P0 -p1
+%patch -P1 -p1
 chmod -R u+Xrw .
-%patch2 -p1
-%patch3 -p1
+%patch -P2 -p1
+%patch -P3 -p1
 
 %build
 rm -f missing
